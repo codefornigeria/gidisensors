@@ -10,13 +10,12 @@
 		</p>
 
 		<div>
-			<select class="location">
-				<option>Select your city</option>
-				<option>Yaba</option>
-				<option>Surulere</option>
+			<select class="location" ng-model="location">
+				<option value="">Select your city</option>
+				<option ng-repeat="area in areas" value="{{area.name}}" ng-selected="goToMap(area)">{{area.name}}</option>
 			</select>
 		</div>
 
-		<p class="user-location"><i class="fa fa-map-marker"></i> Use your location</p>
+		<p class="user-location" ui-sref="map"><i class="fa fa-map-marker"></i> Use your location</p>
 	</div>
 </div>

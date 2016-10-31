@@ -7,12 +7,13 @@ angular.module('app', [
     'app.controllers',
     'app.directives',
     'chart.js',
+    'ngMap',
     'angularUtils.directives.dirDisqus'
     ])
 
 .config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', 'ChartJsProvider', '$locationProvider',
   function($stateProvider, $urlRouterProvider, RestangularProvider, ChartJsProvider, $locationProvider) {
-      $locationProvider.hashPrefix('!');
+      // $locationProvider.hashPrefix('!');
       ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
       RestangularProvider.setBaseUrl('https://budget-datakit-api.herokuapp.com/');
 
@@ -27,14 +28,14 @@ angular.module('app', [
       
       $stateProvider
       .state('home', {
-        url: '',
+        url: '/home',
         templateUrl: 'modules/home.html',
         controller: 'appCtrl'
     })
-      .state('results', {
-          url: '/search?query',
-          templateUrl: 'modules/search-result.html',
-          controller: 'resultCtrl'
+      .state('map', {
+          url: '/map',
+          templateUrl: 'modules/map.html',
+          controller: 'mapCtrl'
       })  
       .state('entity', {
           url: '/entity?query',

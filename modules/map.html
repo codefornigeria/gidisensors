@@ -1,3 +1,79 @@
-<div class="container">
-	
+<nav class="col-md-12 toolbar">
+	<div class="col-md-6 toolbar-logo">
+		<a ui-sref="home"> GIDI SENSORS </a>
+	</div>
+	<div class="col-md-6 about">
+		<a href="">About</a>
+	</div>
+</nav>
+<div class="overlay" ng-show="details" ng-click="closeOverlay">
+	<div class="left-panel">
+		<h2 class="col-md-12">AQI: 50</h2>
+		<p class="col-md-12 location">Yaba college of technology</p>
+
+		<div class="results">
+			<div class="result">
+				<div class="col-md-6 col-xs-6 result-title">PM2.5</div>
+				<div class="col-md-6 col-xs-6">169ug/m3</div>
+			</div>
+			<div class="result">
+				<div class="col-md-6 col-xs-6 result-title">PM2.5</div>
+				<div class="col-md-6 col-xs-6">169ug/m3</div>
+			</div>
+			<div class="result">
+				<div class="col-md-6 col-xs-6 result-title">PM2.5</div>
+				<div class="col-md-6 col-xs-6">169ug/m3</div>
+			</div>
+		</div>
+		<hr>
+	</div>
+</div>
+<div class="map">
+	 <ng-map center="[6.519342, 3.372343]" zoom="15" scrollwheel="false">
+	 	<marker ng-repeat="area in areas" position="{{area.pos}}" icon="assets/img/green.png" title="Location: {{area.name}}" on-click="seeDetails(event, area, 'area')"></marker>
+	 </ng-map>
+
+	 <div class="map-key">
+	 	<div class="col-md-12">
+	 		<div class="form-group">
+                <input class="form-control" type="text" name="" placeholder="Enter Location">
+            </div>
+	 	</div>
+	 	<div class="col-md-12">
+	 		<div class="col-md-4">AQI</div>
+	 		<div class="col-md-4">Remark</div>
+	 		<div class="col-md-4">Color</div>
+	 	</div>
+	 	<hr>
+	 	<div class="col-md-12 info">
+	 		<div class="col-md-4">0 - 50</div>
+	 		<div class="col-md-4">Good</div>
+	 		<div class="col-md-4 good-color"></div>
+	 	</div>
+	 	<div class="col-md-12 info">
+	 		<div class="col-md-4">51 - 100</div>
+	 		<div class="col-md-4">Satisfactory</div>
+	 		<div class="col-md-4 satisfactory-color"></div>
+	 	</div>
+	 	<div class="col-md-12 info">
+	 		<div class="col-md-4">101 - 200</div>
+	 		<div class="col-md-4">Moderate</div>
+	 		<div class="col-md-4 moderate-color"></div>
+	 	</div>
+	 	<div class="col-md-12 info">
+	 		<div class="col-md-4">201 - 300</div>
+	 		<div class="col-md-4">Poor</div>
+	 		<div class="col-md-4 poor-color"></div>
+	 	</div>
+	 	<div class="col-md-12 info">
+	 		<div class="col-md-4">301 - 400</div>
+	 		<div class="col-md-4">Very Poor</div>
+	 		<div class="col-md-4 very-poor-color"></div>
+	 	</div>
+	 	<div class="col-md-12 info">
+	 		<div class="col-md-4">401 - 500</div>
+	 		<div class="col-md-4">Severe</div>
+	 		<div class="col-md-4 severe-color"></div>
+	 	</div>
+	 </div>
 </div>
