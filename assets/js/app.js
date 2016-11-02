@@ -38,5 +38,5 @@ angular.module('app', [
           controller: 'mapCtrl'
       })  
 
-      $urlRouterProvider.otherwise('/404')  
+      $urlRouterProvider.otherwise('/home')  
   }])
