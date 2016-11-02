@@ -23,6 +23,17 @@ a {
   flex-direction: column;
   justify-content: center;
 }
+.landing-page .landing-page-logo {
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .landing-page .landing-page-logo {
+    width: 80px;
+  }
+}
 .landing-page h1 {
   color: #ffffff;
   text-transform: uppercase;
@@ -56,7 +67,8 @@ a {
 }
 .toolbar {
   background: #000000;
-  padding: 1%;
+  height: 60px;
+  line-height: 60px;
   padding-left: 3%;
   padding-right: 3%;
   color: #ffffff;
@@ -97,6 +109,11 @@ a {
   z-index: 9;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .left-panel {
+    width: 90%;
+  }
+}
 .left-panel h2 {
   font-weight: bold;
   color: green;
@@ -124,12 +141,33 @@ a {
 .left-panel hr {
   border-color: #ffffff;
 }
+.left-panel .tips {
+  margin-top: 40px;
+  color: #ffffff;
+}
+.left-panel .tips h1 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.left-panel .tips li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+.left-panel .tips li .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-block;
+  margin-right: 15px;
+}
 .map {
   width: 100%;
   float: left;
 }
 ng-map {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
 }
 .map-key {
   width: 300px;
@@ -141,6 +179,11 @@ ng-map {
   padding-top: 30px;
   padding-bottom: 30px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .map-key {
+    display: none;
+  }
 }
 .map-key hr {
   margin-top: 50px;

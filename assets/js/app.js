@@ -33,19 +33,9 @@ angular.module('app', [
         controller: 'appCtrl'
     })
       .state('map', {
-          url: '/map',
+          url: '/map?place',
           templateUrl: 'modules/map.html',
           controller: 'mapCtrl'
-      })  
-      .state('entity', {
-          url: '/entity?query',
-          templateUrl: 'modules/entity.html',
-          controller: 'entityCtrl'
-      })
-      .state('compare', {
-          url: '/compare',
-          templateUrl: 'modules/compare.html',
-          controller: 'compareCtrl'
       })  
 
       $urlRouterProvider.otherwise('/404')  

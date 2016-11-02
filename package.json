@@ -1,32 +1,30 @@
 {
-  "name": "sahara-health-ui",
+  "name": "gidisensors",
   "version": "1.0.0",
    "engines": {
     "node": "0.12.7"
   },
-  "description": "front end implementation for Datakit UI",
+  "description": "front end implementation for gidisensors",
   "main": "server.js",
   "scripts": {
     "test": "\"echo hello world\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codefornigeria/healthtoolsv2.git"
+    "url": "git+https://github.com/codefornigeria/gidisensors.git"
   },
   "keywords": [
-    "Ministry",
-    "MDAS",
-    "Persons",
-    "Senators",
-    "Representatives",
-    "Budgets"
+    "Sensors",
+    "Environment",
+    "Health",
+    "data"  
   ],
-  "author": "tobi oladele , inioluwa adebanjo",
+  "author": "tobi oladele",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codefornigeria/data-kit-ui.git"
+    "url": "https://github.com/codefornigeria/gidisensors.git"
   },
-  "homepage": "https://github.com/codefornigeria/data-kit-ui#readme",
+  "homepage": "https://github.com/codefornigeria/gidisensors#readme",
   "dependencies": {
     "node-static": "^0.7.7"
   }

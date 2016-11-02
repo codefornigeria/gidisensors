@@ -6,26 +6,32 @@
 		<a href="">About</a>
 	</div>
 </nav>
-<div class="overlay" ng-show="details" ng-click="closeOverlay">
-	<div class="left-panel">
-		<h2 class="col-md-12">AQI: 50</h2>
-		<p class="col-md-12 location">Yaba college of technology</p>
+<div class="overlay" ng-show="details" ng-click="closeOverlay()">
+	<div class="left-panel animated fadeInLeft">
+		<h2 class="col-md-12">AQI: {{selectedPoint.aqi}}</h2>
+		<p class="col-md-12 location">{{selectedPoint.address}}</p>
 
 		<div class="results">
-			<div class="result">
-				<div class="col-md-6 col-xs-6 result-title">PM2.5</div>
-				<div class="col-md-6 col-xs-6">169ug/m3</div>
+			<div class="result col-md-12 col-xs-12 no-padder">
+				<div class="col-md-6 result-title">PM2.5</div>
+				<div class="col-md-6">{{selectedPoint.pm25}}ug/m3</div>
 			</div>
-			<div class="result">
-				<div class="col-md-6 col-xs-6 result-title">PM2.5</div>
-				<div class="col-md-6 col-xs-6">169ug/m3</div>
+			<div class="result col-md-12 col-xs-12 no-padder">
+				<div class="col-md-6 result-title">PM10</div>
+				<div class="col-md-6">{{selectedPoint.pm10}}ug/m3</div>
 			</div>
-			<div class="result">
-				<div class="col-md-6 col-xs-6 result-title">PM2.5</div>
-				<div class="col-md-6 col-xs-6">169ug/m3</div>
+			<div class="result col-md-12 col-xs-12 no-padder">
+				<div class="col-md-6 result-title">N02</div>
+				<div class="col-md-6">{{selectedPoint.no2}}ug/m3</div>
 			</div>
 		</div>
 		<hr>
+		<div class="col-md-12 tips">
+			<h1>Tips:</h1>
+			<ul>
+				<li ng-repeat="tip in selectedPoint.tips"><span class="dot"></span> {{tip}} </li>
+			</ul>
+		</div>
 	</div>
 </div>
 <div class="map">
@@ -36,7 +42,7 @@
 	 <div class="map-key">
 	 	<div class="col-md-12">
 	 		<div class="form-group">
-                <input class="form-control" type="text" name="" placeholder="Enter Location">
+                <input class="form-control" type="text" name="" placeholder="Enter Location" ng-model="search">
             </div>
 	 	</div>
 	 	<div class="col-md-12">

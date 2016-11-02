@@ -1,4 +1,5 @@
 <div class="landing-page">
+	<img src="assets/img/cfn_logo.png" class="landing-page-logo">
 	<div class="col-md-6 col-md-offset-3">
 		<h1>Gidi Sensors</h1>
 
@@ -10,9 +11,8 @@
 		</p>
 
 		<div>
-			<select class="location" ng-model="location">
+			<select class="location" ng-options="area as area.name for area in areas track by area.id" ng-model="selectedPlace" ng-change="goToMap(selectedPlace)">
 				<option value="">Select your city</option>
-				<option ng-repeat="area in areas" value="{{area.name}}" ng-selected="goToMap(area)">{{area.name}}</option>
 			</select>
 		</div>
 
