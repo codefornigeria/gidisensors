@@ -109,6 +109,16 @@ a {
   z-index: 9;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+@media all and (min-width: 320px) and (max-width: 1024px) {
+  .left-panel {
+    width: 30%;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 959px) {
+  .left-panel {
+    width: 50%;
+  }
+}
 @media all and (min-width: 320px) and (max-width: 640px) {
   .left-panel {
     width: 90%;

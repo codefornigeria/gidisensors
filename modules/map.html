@@ -12,17 +12,17 @@
 		<p class="col-md-12 location">{{selectedPoint.address}}</p>
 
 		<div class="results">
-			<div class="result col-md-12 col-xs-12 no-padder">
-				<div class="col-md-6 result-title">PM2.5</div>
-				<div class="col-md-6">{{selectedPoint.pm25}}ug/m3</div>
+			<div class="result col-md-12 col-xs-12 col-sm-12 no-padder">
+				<div class="col-md-6 col-xs-6 result-title">PM2.5</div>
+				<div class="col-md-6 col-xs-6">{{selectedPoint.pm25}}ug/m3</div>
 			</div>
-			<div class="result col-md-12 col-xs-12 no-padder">
-				<div class="col-md-6 result-title">PM10</div>
-				<div class="col-md-6">{{selectedPoint.pm10}}ug/m3</div>
+			<div class="result col-md-12 col-xs-12 col-sm-12 no-padder">
+				<div class="col-md-6 col-xs-6 result-title">PM10</div>
+				<div class="col-md-6 col-xs-6">{{selectedPoint.pm10}}ug/m3</div>
 			</div>
-			<div class="result col-md-12 col-xs-12 no-padder">
-				<div class="col-md-6 result-title">N02</div>
-				<div class="col-md-6">{{selectedPoint.no2}}ug/m3</div>
+			<div class="result col-md-12 col-xs-12 col-sm-12 no-padder">
+				<div class="col-md-6 col-xs-6 result-title">N02</div>
+				<div class="col-md-6 col-xs-6">{{selectedPoint.no2}}ug/m3</div>
 			</div>
 		</div>
 		<hr>
@@ -39,47 +39,47 @@
 	 	<marker ng-repeat="area in areas" position="{{area.pos}}" icon="assets/img/green.png" title="Location: {{area.name}}" on-click="seeDetails(event, area, 'area')"></marker>
 	 </ng-map>
 
-	 <div class="map-key">
+	 <div class="map-key animated fadeInRight">
 	 	<div class="col-md-12">
 	 		<div class="form-group">
                 <input class="form-control" type="text" name="" placeholder="Enter Location" ng-model="search">
             </div>
 	 	</div>
 	 	<div class="col-md-12">
-	 		<div class="col-md-4">AQI</div>
-	 		<div class="col-md-4">Remark</div>
-	 		<div class="col-md-4">Color</div>
+	 		<div class="col-md-4 col-xs-4">AQI</div>
+	 		<div class="col-md-4 col-xs-4">Remark</div>
+	 		<div class="col-md-4 col-xs-4">Color</div>
 	 	</div>
 	 	<hr>
 	 	<div class="col-md-12 info">
-	 		<div class="col-md-4">0 - 50</div>
-	 		<div class="col-md-4">Good</div>
-	 		<div class="col-md-4 good-color"></div>
+	 		<div class="col-md-4 col-xs-4">0 - 50</div>
+	 		<div class="col-md-4 col-xs-4">Good</div>
+	 		<div class="col-md-4 col-xs-4 good-color"></div>
 	 	</div>
 	 	<div class="col-md-12 info">
-	 		<div class="col-md-4">51 - 100</div>
-	 		<div class="col-md-4">Satisfactory</div>
-	 		<div class="col-md-4 satisfactory-color"></div>
+	 		<div class="col-md-4 col-xs-4">51 - 100</div>
+	 		<div class="col-md-4 col-xs-4">Satisfactory</div>
+	 		<div class="col-md-4 col-xs-4 satisfactory-color"></div>
 	 	</div>
 	 	<div class="col-md-12 info">
-	 		<div class="col-md-4">101 - 200</div>
-	 		<div class="col-md-4">Moderate</div>
-	 		<div class="col-md-4 moderate-color"></div>
+	 		<div class="col-md-4 col-xs-4">101 - 200</div>
+	 		<div class="col-md-4 col-xs-4">Moderate</div>
+	 		<div class="col-md-4 col-xs-4 moderate-color"></div>
 	 	</div>
 	 	<div class="col-md-12 info">
-	 		<div class="col-md-4">201 - 300</div>
-	 		<div class="col-md-4">Poor</div>
-	 		<div class="col-md-4 poor-color"></div>
+	 		<div class="col-md-4 col-xs-4">201 - 300</div>
+	 		<div class="col-md-4 col-xs-4">Poor</div>
+	 		<div class="col-md-4 col-xs-4 poor-color"></div>
 	 	</div>
 	 	<div class="col-md-12 info">
-	 		<div class="col-md-4">301 - 400</div>
-	 		<div class="col-md-4">Very Poor</div>
-	 		<div class="col-md-4 very-poor-color"></div>
+	 		<div class="col-md-4 col-xs-4">301 - 400</div>
+	 		<div class="col-md-4 col-xs-4">Very Poor</div>
+	 		<div class="col-md-4 col-xs-4 very-poor-color"></div>
 	 	</div>
 	 	<div class="col-md-12 info">
-	 		<div class="col-md-4">401 - 500</div>
-	 		<div class="col-md-4">Severe</div>
-	 		<div class="col-md-4 severe-color"></div>
+	 		<div class="col-md-4 col-xs-4">401 - 500</div>
+	 		<div class="col-md-4 col-xs-4">Severe</div>
+	 		<div class="col-md-4 col-xs-4 severe-color"></div>
 	 	</div>
 	 </div>
 </div>
